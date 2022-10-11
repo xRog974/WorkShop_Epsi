@@ -55,12 +55,13 @@ html, body {
     padding: 8px;
   }
 
-
   .article { 
     /* flex:4 1 auto; */
     order:0;
     flex-grow:4;
     align-self:auto;
+    font-family: Verdana;
+    font-size: 2vh;
   }
             
   .filter { 
@@ -70,23 +71,21 @@ html, body {
     align-self: auto;
   }
             
-  .flex-container {
+  .flex-container-poste {
 
     display: flex;
-      
     /* flex-flow: column; */ 
     flex-direction: column;  
     height: 100%;
-    padding: 15px;
+
     gap: 5px;
 
   }
 
-  .flex-container > div{
-    background: #ffecb3;
-    border: 3px solid #ffcc80;
-    border-radius: 5px;
-    padding: 8px;
+  .flex-container-poste > div{
+    background: #ffffff;
+    border: 1px solid #707070;
+    padding: 2px;
   }
 
   .flex-container-navbar{
@@ -98,10 +97,7 @@ html, body {
   }
 
   .flex-container-navbar > div{
-    background: yellowgreen;
     color: #707070;
-
-
   }
 
   .Title{
@@ -132,4 +128,53 @@ html, body {
     font-family: 'Segoe UI';
     font-size: 2.5vh ;
     font-weight: bold;
+  }
+
+  .header-liste-poste{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 10px;
+    padding-bottom: 20px;
+
+  }
+
+  .header-liste-poste>div{
+
+    align-self: center;
+    text-align: center;
+  }
+
+  .article-poste{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 8vh;
+  }
+
+  .article-poste > div{
+    background: #ffffff;
+
+    padding: 2px;
+
+    align-self: center;
+    text-align: center;
+  }
+
+
+  .description-poste{
+    flex: 2 1 400px;
+    overflow: hidden;
+  }
+
+  .bouton-poste{
+    flex: 1 1 200px;
+  }
+
+  .poste{
+    flex: 1 1 200px;
+  }
+
+  .ville{
+    flex: 1 1 200px;
   }
