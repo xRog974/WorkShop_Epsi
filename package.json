@@ -1,0 +1,27 @@
+{
+  "name": "workshop-api",
+  "version": "1.0.0",
+  "description": "The WorkShop API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongoose",
+    "api"
+  ],
+  "author": "Thomas Boidun",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "expres": "^0.0.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20",
+    "validator": "^13.7.0"
+  }
+}
