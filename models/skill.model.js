@@ -22,9 +22,6 @@ const skillSchema = new mongoose.Schema({
             message: '{VALUE} is not supported'
           }
      },
-     userId: {
-      type: String
-     }
 });
 
 module.exports.Skill = mongoose.model('Skill', skillSchema);
