@@ -24,7 +24,7 @@ html, body {
 
   .navbar { 
     /* flex:1 1 auto; */
-    background-color: #E5FDB9;
+    background-color: palegreen;
     height: 12vh;
     order:0;
     flex-grow:8;
@@ -51,7 +51,7 @@ html, body {
 
   .flex-container-body > div{
     border-radius: 5px;
-    border: lightslategray solid 3px;
+
     padding: 8px;
   }
 
@@ -64,11 +64,13 @@ html, body {
     font-size: 2vh;
   }
             
-  .filter { 
+  .filtre { 
     /* flex:1 1 auto; */
-    background: honeydew;
+    background: #E4E3E3;
     flex-grow:1;
     align-self: auto;
+    display: flex;
+    flex-direction: column;
   }
             
   .flex-container-poste {
@@ -177,4 +179,37 @@ html, body {
 
   .ville{
     flex: 1 1 200px;
+  }
+
+
+  .button {
+    background-color: slategrey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .filtre-bouton{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .button{
+    flex: 1 1 auto
+  }
+
+  .filtre-comp{
+    display: flex;
+    flex-direction: column;
   }
