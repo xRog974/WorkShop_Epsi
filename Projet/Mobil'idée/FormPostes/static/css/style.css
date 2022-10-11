@@ -1,0 +1,215 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.flex-container-whole {
+
+    display: flex;
+      
+    /* flex-flow: column; */ 
+    flex-direction: column;  
+
+    background-color:whitesmoke;
+    height: 100%;
+    gap: 5px;
+
+  }
+
+  .flex-container-whole > div{
+    
+    padding: 8px;
+  }
+
+
+  .navbar { 
+    /* flex:1 1 auto; */
+    background-color: palegreen;
+    height: 12vh;
+    order:0;
+    flex-grow:8;
+    align-self:stretch;
+  }
+			
+  .body-index { 
+    /* flex:8 1 auto; */
+    background: whitesmoke;
+    flex-grow:8;
+    align-self:stretch;
+  }
+			
+  .flex-container-body {        
+  
+    display: flex;
+      
+    /* flex-flow: row; */ 
+    flex-direction: row;  
+    height: 100%;
+    padding: 15px;
+
+  }
+
+  .flex-container-body > div{
+    border-radius: 5px;
+
+    padding: 8px;
+  }
+
+  .article { 
+    /* flex:4 1 auto; */
+    order:0;
+    flex-grow:4;
+    align-self:auto;
+    font-family: Verdana;
+    font-size: 2vh;
+  }
+            
+  .filtre { 
+    /* flex:1 1 auto; */
+    background: #E4E3E3;
+    flex-grow:1;
+    align-self: auto;
+    display: flex;
+    flex-direction: column;
+  }
+            
+  .flex-container-poste {
+
+    display: flex;
+    /* flex-flow: column; */ 
+    flex-direction: column;  
+    height: 100%;
+
+    gap: 5px;
+
+  }
+
+  .flex-container-poste > div{
+    background: #ffffff;
+    border: 1px solid #707070;
+    padding: 2px;
+  }
+
+  .flex-container-navbar{
+    display: flex;
+      
+    /* flex-flow: column; */ 
+    flex-direction: row;  
+    height: 100%;
+  }
+
+  .flex-container-navbar > div{
+    color: #707070;
+  }
+
+  .Title{
+      flex: 1 1 auto;
+      font-family: 'Segoe UI';
+      font-size: 5vh ;
+      font-weight: bold;
+      align-self: center;
+      text-align: center
+     
+  }
+
+  .navbar-menu{
+    flex: 6 4 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;
+  }
+
+
+
+  .navbar-menu > div{
+    align-self: center;
+    text-align: center;
+    flex: 1 1 auto;
+
+    font-family: 'Segoe UI';
+    font-size: 2.5vh ;
+    font-weight: bold;
+  }
+
+  .header-liste-poste{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 10px;
+    padding-bottom: 20px;
+
+  }
+
+  .header-liste-poste>div{
+
+    align-self: center;
+    text-align: center;
+  }
+
+  .article-poste{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 8vh;
+  }
+
+  .article-poste > div{
+    background: #ffffff;
+
+    padding: 2px;
+
+    align-self: center;
+    text-align: center;
+  }
+
+
+  .description-poste{
+    flex: 2 1 400px;
+    overflow: hidden;
+  }
+
+  .bouton-poste{
+    flex: 1 1 200px;
+  }
+
+  .poste{
+    flex: 1 1 200px;
+  }
+
+  .ville{
+    flex: 1 1 200px;
+  }
+
+
+  .button {
+    background-color: slategrey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .filtre-bouton{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .button{
+    flex: 1 1 auto
+  }
+
+  .filtre-comp{
+    display: flex;
+    flex-direction: column;
+  }

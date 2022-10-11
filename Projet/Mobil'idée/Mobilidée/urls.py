@@ -20,7 +20,8 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     #FormPostes URLs
-    path('', views.poste_list, name='postes_list'),
+    path('signup/', views.signup, name='signup'),
+    path('home/', views.poste_list, name='home'),
     path('details/<int:id>/', views.poste_details, name='poste_details'),
     path('create/', views.poste_create, name='poste_create'),
     path('update/<int:id>/', views.poste_update, name='poste_update'),
