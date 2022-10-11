@@ -3,21 +3,20 @@ html, body {
     height: 100%;
 }
 
-.flex-container {
+.flex-container-whole {
 
     display: flex;
       
     /* flex-flow: column; */ 
     flex-direction: column;  
 
-    background-color: honeydew;
+    background-color:whitesmoke;
     height: 100%;
-    padding: 15px;
     gap: 5px;
 
   }
 
-  .flex-container > div{
+  .flex-container-whole > div{
     
     padding: 8px;
   }
@@ -26,20 +25,20 @@ html, body {
   .navbar { 
     /* flex:1 1 auto; */
     background-color: #E5FDB9;
+    height: 12vh;
     order:0;
     flex-grow:8;
     align-self:stretch;
-    font-size: x-large ;
   }
 			
-  .item2 { 
+  .body-index { 
     /* flex:8 1 auto; */
     background: whitesmoke;
     flex-grow:8;
     align-self:stretch;
   }
 			
-  .flex-container2 {        
+  .flex-container-body {        
   
     display: flex;
       
@@ -50,23 +49,87 @@ html, body {
 
   }
 
-  .flex-container2 > div{
+  .flex-container-body > div{
     border-radius: 5px;
+    border: lightslategray solid 3px;
     padding: 8px;
   }
 
 
-  .item3 { 
+  .article { 
     /* flex:4 1 auto; */
     order:0;
     flex-grow:4;
     align-self:auto;
   }
             
-  .item4 { 
+  .filter { 
     /* flex:1 1 auto; */
-    background: ;
+    background: honeydew;
     flex-grow:1;
     align-self: auto;
   }
             
+  .flex-container {
+
+    display: flex;
+      
+    /* flex-flow: column; */ 
+    flex-direction: column;  
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+  }
+
+  .flex-container > div{
+    background: #ffecb3;
+    border: 3px solid #ffcc80;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  .flex-container-navbar{
+    display: flex;
+      
+    /* flex-flow: column; */ 
+    flex-direction: row;  
+    height: 100%;
+  }
+
+  .flex-container-navbar > div{
+    background: yellowgreen;
+    color: #707070;
+
+
+  }
+
+  .Title{
+      flex: 1 1 auto;
+      font-family: 'Segoe UI';
+      font-size: 5vh ;
+      font-weight: bold;
+      align-self: center;
+      text-align: center
+     
+  }
+
+  .navbar-menu{
+    flex: 6 4 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;
+  }
+
+
+
+  .navbar-menu > div{
+    align-self: center;
+    text-align: center;
+    flex: 1 1 auto;
+
+    font-family: 'Segoe UI';
+    font-size: 2.5vh ;
+    font-weight: bold;
+  }
