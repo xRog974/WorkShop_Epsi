@@ -11,10 +11,10 @@ module.exports.createSkill = async (req, res) => {
     }
 };
 
-module.exports.getAllSkill = async (req, res) => {
+module.exports.getAllSkills = async (req, res) => {
     try {
         const skillList = await Skill.find();
-        res.status(200).json({ skillList: skillList });
+        res.status(200).json(skillList);
     } catch (err) {
         res.status(400).send({ error: 'Skill Collection not fetched' });
     }
@@ -25,34 +25,28 @@ module.exports.getSkillById = async (req, res) => {
 
     try {
         const skill = await Skill.findOne({ id });
-        res.status(200).json({ skill: skill })
+        res.status(200).json(skill)
     } catch (err) {
         res.status(400).send({ error: `No skill found with id ${id}` });
     }
 };
 
 module.exports.updateSkillById = async (req, res) => {
-    const { id, name, category, tag } = req.body;
-
-    const skill = await Skill.findById(id);
-
-    if (!skill) {
-        res.status(404).send({ error: `No skill found with id ${id}` });
-        return;
+    const updateRecord = {
+        name: req.body.name,
+        category: req.body.category,
+        tag: req.body.tag,
     }
 
-    const update = {
-        name: name ? name : skill.name,
-        category: category ? category : skill.category,
-        tag: tag ? tag : skill.tag
-    };
-
-    try {
-        const skill = await Skill.updateOne({ _id: id }, update);
-        res.status(200).json({ skill: skill });
-    } catch (err) {
-        res.status(400).send({ error: 'No skill updated!' });
-    }
+    Skill.findByIdAndUpdate(
+        req.body.id,
+        { $set: updateRecord },
+        { new: true },
+        (err, docs) => {
+            if (!err) res.send(docs);
+            else console.error('Update error: ' + err);
+        }
+    )
 }
 
 module.exports.deleteSkillById = async (req, res) => {
