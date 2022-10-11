@@ -11,6 +11,9 @@ app.use('/users', userRouter);
 const skillRouter = require('./routes/skill.router');
 app.use('/skills', skillRouter);
 
+const jobRouter = require('./routes/job.router');
+app.use('/jobs', jobRouter);
+
 app.listen(3000, () => {
     console.log('App started!');
 })

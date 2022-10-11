@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const SkillModel = require('./skill.model');
 
 const jobSchema = new mongoose.Schema({
     title: {
@@ -11,16 +10,12 @@ const jobSchema = new mongoose.Schema({
         require: true
     },
     skills: {
-        type: [SkillModel],
-        require: true
+        type: [String],
     },
     createdAt: {
         type: Date,
-        require: true,
     },
-    userId:{
-        type :String
-    }
+
 });
 
-module.exports.JobModel = mongoose.model('Job', jobSchema);
+module.exports.Job = mongoose.model('Job', jobSchema);

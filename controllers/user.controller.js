@@ -27,3 +27,9 @@ module.exports.login  =async (req,res)=> {
             res.status(404)
     }
 }
+
+module.exports.logOut = async (req,res)=> {
+    res.status(200).json({message: "vous êtes bien déconnecté"})
+
+    res.redirect("/")
+}
