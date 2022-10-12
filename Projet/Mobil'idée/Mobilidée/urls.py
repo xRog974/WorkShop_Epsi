@@ -15,12 +15,13 @@ Including another URLconf
 """
 from FormPostes import views
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #FormPostes URLs
-    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
     path('home/', views.poste_list, name='home'),
     path('details/<int:id>/', views.poste_details, name='poste_details'),
     path('create/', views.poste_create, name='poste_create'),
