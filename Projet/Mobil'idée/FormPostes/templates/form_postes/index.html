@@ -1,0 +1,169 @@
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mobil'Idée - la plateforme de mobilité interne</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="SitePoint">
+
+    <meta property="og:title" content="A Basic HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <div class="flex-container-whole">
+        <div class="navbar">
+            <div class="flex-container-navbar">
+                <div class="Title">
+                    Mobil'Idée <span style="color:red">RH</span>
+                </div>
+                <div class="navbar-menu">
+
+                    <div class="link">Proposition de postes</div>
+                    <div class="link">Bilan de compétences</div>
+                    <div class="link">Suivre mes demandes</div>
+                    <div class="link">Suivi RH</div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="body-index flex-container-body">
+
+            <div class="article">
+
+                <div class="header-liste-poste">
+                    <div class="poste">Intitulé du poste</div>
+                    <div class="description-poste">Description du poste</div>
+                    <div class="ville">Ville</div>
+                    <div class="bouton-poste">Page de poste</div>
+                </div>
+
+                <div class="flex-container-poste">
+
+
+                    <div class="article-poste">
+                        <div></div>
+                        <div class="poste"> Poste</div>
+                        <div class="description-poste"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quia
+                        </div>
+                        <div class="ville"> Bordeaux</div>
+                        <div class="bouton-poste"> En savoir +</div>
+                    </div>
+
+
+                    {% for x in poste %}
+                    <div class="article-poste">
+                        <div></div>
+                        <div class="poste"> {{x.intitule}}</div>
+                        <div class="description-poste"> {{x.description}} </div>
+                        <div class="ville"> {{x.ville}}</div>
+                        <div class="bouton-poste"> En savoir +</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            <div class="filtre">
+                <div class="filtre-bouton">
+                    <div>Filtres de recherche</div>
+                    <hr>
+                    <div class="container-bouton">
+                        <input type="button" class="button" value="Appliquer">
+                        <input type="button" class="button" value="Reinitialiser">
+                    </div>
+                </div>
+                <hr>
+                <div>Savoir
+                    <hr>
+                    <div class="filtre-comp">
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div>Savoir-Faire
+                    <hr>
+                    <div class="filtre-comp">
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="TODEFINE" name="TODEFINE" checked>
+                            <label for="TODEFINE">TODEFINE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
