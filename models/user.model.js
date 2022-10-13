@@ -14,8 +14,9 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     skills: {
-        type: [String]
-    }
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Skill'
+    },
 
 });
 

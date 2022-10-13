@@ -10,7 +10,8 @@ const jobSchema = new mongoose.Schema({
         require: true
     },
     skills: {
-        type: [String],
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Skill'
     },
     createdAt: {
         type: Date,

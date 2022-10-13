@@ -37,7 +37,7 @@ module.exports.logOut = async (req, res) => {
 
 module.exports.getAllUsers = async (req, res) => {
     try {
-        const userList = await User.find();
+        const userList = await User.find().populate('skills');
         res.status(200).json(userList);
     } catch (err) {
         res.status(400).send({ error: 'No user fetched!' });
@@ -46,12 +46,9 @@ module.exports.getAllUsers = async (req, res) => {
 
 module.exports.getUserById = async (req, res) => {
     const { id } = req.body;
-    try {
-        const user = await User.findById(id);
-        res.status(200).json(user);
-    } catch (err) {
-        res.status(404).send({ error: `No user found with id ${id}` });
-    }
+    const user = await User.findById(id).populate('skills');
+    if (!user) res.status(404).send({ error: `No user found with id ${id}` })
+    else res.status(200).json(user);
 }
 
 

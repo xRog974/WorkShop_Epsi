@@ -1,20 +1,15 @@
 const { Job } = require("../models/job.model");
 
 module.exports.getAllJobs = async (req, res) => {
-    const jobs = await Job.find();
+    const jobs = await Job.find().populate('skills');
     res.status(200).json(jobs);
 };
 
 module.exports.getJobById = async (req, res) => {
     const { id } = req.body;
-    Job.findById(id, (err, docs) => {
-        if (!err) {
-            res.status(200).send(docs);
-        } else {
-            res.status(400).send({ error: `Get error: ${err}` });
-        }
-    })
-
+    const job = await Job.findById(id).populate('skills');
+    if (!job) res.status(404).send({ error: `No job found with id ${id}` })
+    else res.status(200).json(job);
 };
 
 module.exports.createdJob = async (req, res) => {
