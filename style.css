@@ -10,7 +10,7 @@ html, body {
     /* flex-flow: column; */ 
     flex-direction: column;  
 
-    background-color:whitesmoke;
+    background-color:white;
     height: 100%;
     gap: 5px;
 
@@ -33,7 +33,7 @@ html, body {
 			
   .body-index { 
     /* flex:8 1 auto; */
-    background: whitesmoke;
+    background: white;
     flex-grow:8;
     align-self:stretch;
   }
@@ -71,6 +71,8 @@ html, body {
     align-self: auto;
     display: flex;
     flex-direction: column;
+    font-family: Verdana;
+    font-size: 2vh;
   }
             
   .flex-container-poste {
@@ -183,14 +185,14 @@ html, body {
 
 
   .button {
-    background-color: slategrey;
-    border: none;
-    color: white;
+    color: slategrey;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
+    background-color:#ffffff;
+    border-color: #b8B8B8;
     cursor: pointer;
   }
 
@@ -206,7 +208,7 @@ html, body {
   }
 
   .button{
-    flex: 1 1 auto
+    flex: 1 1 auto;
   }
 
   .filtre-comp{
